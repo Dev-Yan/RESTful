@@ -15,7 +15,7 @@ app.get("/users/:id", (req, res) => {
     const {id} = req.params
     const user = doc.find(us => us.id == id);
 
-    if(!user) return res.status(204).json(); // se caso não existir registro do id inserido no endpoint, retorna o status 204 (No Content)
+    if(!user) return res.status(204).json(); // se caso não existir registro do id inserido no endpoint, retorna o código de status 204 (No Content)
     
     res.json(user);
 })
